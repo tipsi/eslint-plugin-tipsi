@@ -98,23 +98,21 @@ ruleTester.run('remove-event-listener', removeEventListener, {
           }
 
           componentDidMount() {
-            this.rootNodeRef.addEventListener('click', this.handleRootNodeClick)
+            window.addEventListener('click', this.handleRootNodeClick)
           }
 
           componentWillUnmount() {
-            this.rootNodeRef.removeEventListener('click', this.handleRootNodeKeyPress)
+            window.removeEventListener('click', this.handleRootNodeKeyPress)
           }
 
           render() {
-            return (
-              <div ref={node => this.rootNodeRef = node} />
-            )
+            return null
           }
         }
       `,
       errors: [{
         message: 'this.handleRootNodeClick and this.handleRootNodeKeyPress ' +
-          'on this.rootNodeRef for click do not match',
+          'on window for click do not match',
       }],
     },
     {
