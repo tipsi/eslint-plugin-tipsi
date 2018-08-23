@@ -1,0 +1,42 @@
+{
+  "name": "eslint-plugin-tipsi",
+  "version": "1.0.0",
+  "description": "Custom Tipsi rules for eslint",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/lib/rules/remove-event-listener.js",
+    "lint": "eslint lib/* tests/* index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isnifer/eslint-plugin-tipsi.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "author": "Tipsi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isnifer/eslint-plugin-tipsi/issues"
+  },
+  "homepage": "https://github.com/isnifer/eslint-plugin-tipsi#readme",
+  "dependencies": {
+    "lodash": "4.17.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.6",
+    "eslint": "5.4.0",
+    "eslint-config-tipsi": "2.1.0",
+    "pre-commit": "1.2.2"
+  },
+  "peerDependencies": {
+    "eslint": "5.4.0"
+  },
+  "eslintConfig": {
+    "extends": "tipsi"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
