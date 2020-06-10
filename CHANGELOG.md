@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2] - 2020-06-09
+### Updated
+- Adjust lodash version
+
 ## [1.0.1] - 2018-08-23
 ### Updated
 - Added test case for tipsi/remove-event-listener when callee is Identifier
